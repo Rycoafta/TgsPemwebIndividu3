@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memanipulasi DOM by Ryco</title>
+</head>
+    <style>
+        body{
+            max-width: 600px;
+            background-color: aliceblue;
+        }
+        html{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            float: left;
+            height: 200px;
+            width: 170px;
+            border-radius: 50%;
+            width: 30%;
+        }
+        .samping{
+            float: left;
+            width: 70%;
+        }
+        main::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .warna{
+            background-color: aqua;
+        }
+        .warna2{
+            background-color: aquamarine;
+        }
+        .mid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    </style>
+<body>
+
+    <img src="Namariko.jpeg">
+
+    <h2 id="biodata"></h2>
+    <table 
+        id="data" class="samping" style="font-family:verdana">
+    </table>
+
+    <h2 id="nama" float="left"> </h2>
+
+    <div class="warna">
+        <div 
+            id="tentang" align="center">
+        </div>
+
+            <div align="center">
+                <h4 id="hasil"></h4>
+                <button id="pesan" onclick="testFunction()">Lihat tentang saya</button>
+            </div>
+    </div>
+
+    <div class="warna2" id="pengalaman"></div>
+    <div class="warna2" id="pendidikan"> </div>
+    <div class="warna" id="kontak"> </div>
+
+    <div class="warna">
+        <h3>Masukkan Saran Anda</h3>
+        <ul id="Detail"></ul>
+        <div class="mid">
+            <input id="masukan" placeholder="Isi disini" type="text">
+            <button id="input" onclick="saran()">Tambah</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
